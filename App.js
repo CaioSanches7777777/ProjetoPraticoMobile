@@ -9,10 +9,10 @@ export default function App() {
   let[filmes, setFilmes] = useState([]);
   
   useEffect(() => {
-    fetch("https://api.otaviolube.com/api/filmes?populate=*").then(filme => filme.json())
-    .then(objeto => {
-      console.log(objeto);
-      setFilmes(objeto.data);
+    fetch("https://api.otaviolube.com/api/filmes?populate=*").then(resultado => resultado.json())
+    .then(filme => {
+      console.log(filme);
+      setFilmes(filme.data);
     })
     .then(error => console.log(error));
     
@@ -21,7 +21,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       {filmes.length > 0 ? 
-      filmes.map(filme => <CartaoFilme key={filme.id} filme={filme.attributes.titulo}></CartaoFilme>)
+      filmes.map(filme => <CartaoFilme key={filme.id} filme={filme.attributes}></CartaoFilme>)
        : <View><ActivityIndicator size={'large'} /><Text>Carregando...</Text></View>}
       
       <StatusBar style="auto" />
