@@ -21,8 +21,8 @@
     const styles = StyleSheet.create ({
         viewCartao: {
             width: '100%',
-            height: '100%',
-            flexDirection: 'row',
+            height: 'fit-content',
+            flexShrink: '0',
             padding: 10,
             margin: 3,
             justifyContent: 'flex-start'
