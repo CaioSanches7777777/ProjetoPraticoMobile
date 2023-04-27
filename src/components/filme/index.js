@@ -5,12 +5,13 @@
 
     export default function CartaoFilme({filme}){
         
-        
 
     return (
         <View style={styles.viewCartao}>
-            <Image style={styles.viewImg}></Image>
-            <Text style={styles.titulo}> {filme.titulo}</Text>
+            <View style={styles.viewImg}>
+                <Image></Image>
+            </View>
+            <Text style={styles.titulo}> {filme.titulo} </Text>
             <Text style={styles.sinopse}>{filme.sinopse}</Text>
             <TouchableOpacity style={styles.btm}>
                 <Text> Comprar </Text>
@@ -20,12 +21,14 @@
     }
     const styles = StyleSheet.create ({
         viewCartao: {
-            width: '100%',
+            width: '80%',
             height: 'fit-content',
+            alignItems: 'center',
             flexShrink: '0',
             padding: 10,
-            margin: 3,
-            justifyContent: 'flex-start'
+            marginBottom: 20,
+            justifyContent: 'flex-start',
+            backgroundColor: '#ffffffa3'/*'#682121'*/
         },
         viewImg: {
             width: 100,
@@ -45,24 +48,19 @@
         },
         titulo: {
             fontSize: 18,
-            color: 'white',
+            color: 'black',
             fontWeight: 'bold',
-            marginBotton: 5
+            margin: 5,
+            backgroundColor: 'silver'
         },
         sinopse: {
             fontSize: 14,
-            color: 'white',
-            marginBotton: 5
-        },
-        preco: {
-            fontSize: 16,
-            color: 'white',
-            fontWeight: 'bold',
-            marginBotton: 5
+            color: 'black',
+            marginBottom: 15
         },
         btm: {
             padding: 10,
-            backgroundColor: 'yellow'
+            backgroundColor: 'gold'
         }
         });
         
