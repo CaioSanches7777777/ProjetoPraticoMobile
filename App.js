@@ -22,7 +22,7 @@ export default function App() {
     <View style={styles.container}>
       {filmes.length > 0 ? 
       filmes.map(filme => <CartaoFilme key={filme.id} filme={filme.attributes.titulo}></CartaoFilme>)
-       : <ActivityIndicator size={'large'} />}<Text>Carregando...</Text>
+       : <View><ActivityIndicator size={'large'} /><Text>Carregando...</Text></View>}
       
       <StatusBar style="auto" />
     </View>
