@@ -4,12 +4,13 @@
 
 
     export default function CartaoFilme({filme}){
-        
+
+    const ImgURL= ("https://api.otaviolube.com");
 
     return (
         <View style={styles.viewCartao}>
             <View style={styles.viewImg}>
-                <Image></Image>
+                <Image source={{uri: ImgURL + filme.poster.data.attributes.url}}></Image>
             </View>
             <Text style={styles.titulo}> {filme.titulo} </Text>
             <Text style={styles.sinopse}>{filme.sinopse}</Text>
@@ -24,20 +25,20 @@
             width: '80%',
             height: 'fit-content',
             alignItems: 'center',
-            flexShrink: '0',
             padding: 10,
             marginBottom: 20,
             justifyContent: 'flex-start',
             backgroundColor: '#ffffffa3'/*'#682121'*/
         },
         viewImg: {
+            alignItems: 'center',
             width: 100,
             height: 150,
             backgroundColor: 'yellow'
         },
         img: {
-            width: '100%',
-            height: '100%',
+            width: 100,
+            height: 150,
             borderRadius: 10
         },
         viewData: {
